@@ -1,6 +1,8 @@
 /*
     汇编代码模拟器
 */
+#ifndef reg_guard
+#define reg_guard
 
 #include<stdlib.h>
 #include<stdio.h>
@@ -62,4 +64,4 @@ typedef struct REG_STRUCT
 
 reg_t reg;
 
-
+#endif

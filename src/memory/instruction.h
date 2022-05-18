@@ -1,3 +1,6 @@
+#ifndef inst_guard
+#define inst_guard
+
 #include<stdlib.h>
 #include<stdio.h>
 #include<stdint.h>
@@ -53,7 +56,7 @@ typedef struct INSTRUCT_STRUCT
 typedef void (*handler_t)(uint64_t, uint64_t);
 
 void mov_reg_reg_handler(uint64_t, uint64_t);
-
+void call_handler(uint64_t, uint64_t);
 void add_reg_reg_handler(uint64_t, uint64_t);
 
 handler_t handler_table[NUM_INSTRTYPE];
@@ -62,3 +65,4 @@ void init_handler_table();
 
 void insruction_cycle();
 
+#endif
